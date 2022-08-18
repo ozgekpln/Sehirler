@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border-radius:10px;
+                background:white;
+                width:400px;
+                height: 300px;
+                margin:auto;
+                margin-top:100px;
+                padding:15px;
+                padding-top: 50px;
+                text-align:center;
+
+        }
+        #kayıt{
+            border-radius:5px;
+                border:none;
+                width:100px;
+                height:30px;
+                margin:20px 0px 20px;
+                background:rgba(240,240,240,.5);
+                padding-left:15px;
+                font-style:italic;
+        }
+        input{
+            border-radius:5px;
+            height: 30px;
+            width:71%;
+            background:#e2eebd;
+                color:white;
+        }
+        input:hover{
+            background:#d7e790;
+                color:white;
+        }
+        body{
+            background-color: rgb(203, 244, 230);
+        }
+        label{
+            FONT-FAMILY: "Helvetica";
+            color:rgb(25, 24, 24)
+        }
+    </style>
+</head>
+<body>
+    <div>
+      <label >İsim:</label>
+
+      <input type="text" id="isim" />
+      <br> <br>
+      <label >Şifre:</label>
+      <input type="password" id="soyisim" />
+<br>
+      <button id="kayıt" type="button" onclick="veriSakla()">Kayıt Ol</button>
+    
+     
+
+    
+</div>
+
+    <br>
+    <h6><a href="index.html" > Ana Sayfaya Dön </a></h6>
+
+    
+  
+  <script>
+
+
+  
+  
+  function veriSakla() {
+  
+      var isim = document.getElementById("isim").value;
+      localStorage.setItem("isim", isim);
+      var soyisim = document.getElementById("soyisim").value;
+      localStorage.setItem("soyisim", soyisim);
+      
+      
+
+  
+  }
+  function veriyiGetir() {
+      document.getElementById("veri").innerHTML = "İsim: "+ localStorage.getItem("isim");
+      document.getElementById("veri2").innerHTML = "Şifre: "+ localStorage.getItem("soyisim");
+      
+
+  }
+
+
+</script>
+</body>
+</html>
